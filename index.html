@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- link css  -->
+
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+    <!--Favicon(page logo) ***must for website***-->
+    <link rel=" icon" href="img/fav_icon logo.ico" type="image/x-icon">
+    <title>JQuery</title>
+</head>
+
+<body>
+    <!-- header start -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="logo">
+                <h1>JQuery</h1>
+            </div>
+        </div>
+    </header>
+    <!-- header end -->
+    <div class="container">
+        <div class="row">
+            <!-- item 1 start -->
+            <div class="col-lg-4">
+                <div class="item1 text-center">
+                    <h2>#1</h2>
+                    <button class="btn btn-info" onclick="showResultVar()">var</button>
+                    <p id="ver"></p>
+                </div>
+            </div>
+            <!-- item 1 end -->
+
+
+
+            <!-- item 2 start -->
+            <div class="col-lg-4">
+                <div class="item1 text-center">
+                    <h2>#2</h2>
+                    <button class="btn btn-info" onclick="showResultLet()">let</button>
+                    <p id="let"></p>
+                </div>
+            </div>
+            <!-- item 2 end -->
+
+
+            <!-- item 3 start -->
+            <div class="col-lg-4">
+                <div class="item1 text-center">
+                    <h2>#3</h2>
+                    <button class="btn btn-info" onclick="showResultConst()">const</button>
+                    <p id="const"></p>
+                </div>
+            </div>
+            <!-- item 3 end -->
+
+
+
+            <!-- item 4 start -->
+            <!-- 1st col -->
+            <div class="col-lg-5">
+                <div class="item1 item_box text-center">
+                    <h2>#4</h2>
+                    <button class="btn btn-info" onclick="showLetResult()">show result let</button>
+                    <p id="letResult"></p>
+                </div>
+            </div>
+
+
+            <!-- 2nd col -->
+            <div class="col-lg-7">
+                <div class="item1 item_box">
+                    <code>
+                <span class="green">// item 4 </span><br>
+                 <span class="red">let </span> <span class="blue">number5, number6; </span><br> <br>
+
+                  <span class="blue">number5 =</span> <span class="yollow">20; </span><br>
+                  <span class="blue">number6 =</span> <span class="yollow">90; </span><br>
+                  
+                  <span class="blue">number5 += number6;</span> <br> <br>
+
+                <span class="red">function </span> <span class="yollow">showLetResult(){ </span> <br>
+                  <span class="blue">document</span> <span class="yollow">.getElementById(' <span class="blue">letResult</span> ')</span>
+                      <span class="red">.innerHTML=number5; </span> <br>
+                  } <br>
+            </code>
+                </div>
+            </div>
+            <!-- item 4 end -->
+
+
+
+
+            <!-- item 5 start -->
+            <!-- 1st col -->
+            <div class="col-lg-7 order-2 order-lg-1">
+                <div class="item1 item_box">
+                    <code>
+            <span class="green">// item 5 </span><br>
+                 <span class="red">var </span> <span class="blue">number8, number9; </span><br> <br>
+
+                  <span class="blue">number8 =</span> <span class="yollow">50; </span><br>
+                  <span class="blue">number9 =</span> <span class="yollow">80; </span><br>
+                  
+                  <span class="blue">number8 += number9;</span> <br> <br>
+
+                <span class="red">function </span> <span class="yollow">showVarResult(){ </span> <br>
+                  <span class="blue">document</span> <span class="yollow">.getElementById(' <span class="blue">varResult</span> ')</span>
+                      <span class="red">.innerHTML=number8; </span> <br>
+                  } <br>
+          </code>
+                </div>
+            </div>
+
+
+
+
+            <!-- 2nd col -->
+            <div class="col-lg-5 order-1 order-lg-2">
+                <div class="item1 item_box text-center">
+                    <h2>#5</h2>
+                    <button class="btn btn-info" onclick="showVarResult()">show result var</button>
+                    <p id="varResult"></p>
+                </div>
+            </div>
+            <!-- item 5 end -->
+        </div>
+
+
+
+
+        <!-- 2nd row -->
+        <div class="row">
+            <!-- item 6  start -->
+            <div class="col-lg-3">
+                <div class="item1 text-center">
+                    <h2>#6</h2>
+                    <button class="btn btn-info" onclick="plusResult()">show result</button>
+                    <p>
+                        <span>70 +</span>
+                        <span>80 =</span>
+                        <span id="plus"></span>
+                    </p>
+                </div>
+            </div>
+            <!-- item 6  end -->
+
+
+
+            <!-- item 7  start -->
+            <div class="col-lg-3">
+                <div class="item1 text-center">
+                    <h2>#7</h2>
+                    <button class="btn btn-info" onclick="minusResult()">show result</button>
+                    <p>
+                        <span>150 -</span>
+                        <span>40 =</span>
+                        <span id="minus"></span>
+                    </p>
+                </div>
+            </div>
+            <!-- item 7  end -->
+
+
+
+
+            <!-- item 8  start -->
+            <div class="col-lg-3">
+                <div class="item1 text-center">
+                    <h2>#8</h2>
+                    <button class="btn btn-info" onclick="count()">show result</button>
+                    <p>
+                        <span>70 X</span>
+                        <span>80 =</span>
+                        <span id="count"></span>
+                    </p>
+                </div>
+            </div>
+            <!-- item 8  end -->
+
+
+
+
+            <!-- item 9  start -->
+            <div class="col-lg-3">
+                <div class="item1 text-center">
+                    <h2>#9</h2>
+                    <button class="btn btn-info" onclick="fraction()">show result</button>
+                    <p>
+                        <span>90 /</span>
+                        <span>80 =</span>
+                        <span id="fraction"></span>
+                    </p>
+                </div>
+            </div>
+            <!-- item 9  end -->
+
+
+
+
+            <!-- item 10 start -->
+            <!-- 1st col -->
+            <div class="col-lg-5">
+                <div class="item1 text-center item_box">
+                    <h2>#10</h2>
+                    <button class="btn btn-info" onclick="equlTrue()">show result</button> <br>
+                    <p>
+                        <span>10</span>
+                        <span class="red">==</span>
+                        <span>10:</span>
+                        <span id="equlTrue" class="green"></span>
+                    </p>
+                </div>
+            </div>
+
+
+
+
+            <!-- 2st col -->
+            <div class="col-lg-7">
+                <div class="item1 item_box">
+                    <code>
+            <span class="green">// item 10 </span><br>
+                 <span class="red">let </span> <span class="blue">number18, number19; </span><br> <br>
+
+                  <span class="blue">number18 =</span> <span class="yollow">20; </span><br>
+                  <span class="blue">number19 =</span> <span class="yollow">20; </span><br>
+                  
+                  <span class="blue">result3 = number18 == number19;</span> <br> <br>
+
+                <span class="red">function </span> <span class="yollow">equlTrue(){ </span> <br>
+                  <span class="blue">document</span> <span class="yollow">.getElementById(' <span class="blue">equlTrue</span> ')</span>
+                      <span class="red">.innerHTML=result3; </span> <br>
+                  } <br>
+          </code>
+                </div>
+            </div>
+            <!-- item 10 end -->
+
+
+
+
+            <!-- item 11 start -->
+            <!-- 1st col -->
+            <div class="col-lg-7 order-2 order-lg-1">
+                <div class="item1 item_box">
+                    <code>
+            <span class="green">// item 11 </span><br>
+                 <span class="red">let </span> <span class="blue">number20, number21; </span><br> <br>
+
+                  <span class="blue">number20 =</span> <span class="yollow">10; </span><br>
+                  <span class="blue">number21 =</span> <span class="yollow">20; </span><br>
+                  
+                  <span class="blue">result2 = number20 == number21;</span> <br> <br>
+
+                <span class="red">function </span> <span class="yollow">equlFalse(){ </span> <br>
+                  <span class="blue">document</span> <span class="yollow">.getElementById(' <span class="blue">equlFalse</span> ')</span>
+                      <span class="red">.innerHTML=result2; </span> <br>
+                  } <br>
+          </code>
+                </div>
+            </div>
+
+
+            <!-- 2st col -->
+            <div class="col-lg-5 order-1 order-lg-2">
+                <div class="item1 text-center item_box">
+                    <h2>#11</h2>
+                    <button class="btn btn-info" onclick="equlFalse()">show result</button> <br>
+                    <p>
+                        <span>10</span>
+                        <span class="red">==</span>
+                        <span>20:</span>
+                        <span id="equlFalse" class="red"></span>
+                    </p>
+                </div>
+            </div>
+            <!-- item 11 end -->
+
+        </div>
+
+
+
+        <!-- 3rd row -->
+        <div class="row">
+            <!-- item 12 start -->
+            <!-- 1st col -->
+            <div class="col-lg-5">
+                <div class="item1 text-center item_box">
+                    <h2>#12</h2>
+                    <button class="btn btn-info" onclick="equlResult()">show result</button> <br>
+                    <p>
+                        <span>20</span>
+                        <span class="red">==</span>
+                        <span class="blue">"20":</span>
+                        <span id="equlResult" class="green"></span>
+                    </p>
+                </div>
+            </div>
+
+
+
+            <!-- 2st col -->
+            <div class="col-lg-7">
+                <div class="item1 item_box">
+                    <code>
+            <span class="green">// item 12 </span><br>
+                 <span class="red">let </span> <span class="blue">number22, number23; </span><br> <br>
+
+                  <span class="blue">number22 =</span> <span class="yollow">20; </span><br>
+                  <span class="blue">number23 =</span> <span class="blue">"20"; </span><br>
+                  
+                  <span class="blue">show = number22 == number23;</span> <br> <br>
+
+                <span class="red">function </span> <span class="yollow">equlResult(){ </span> <br>
+                  <span class="blue">document</span> <span class="yollow">.getElementById(' <span class="blue">equlResult</span> ')</span>
+                      <span class="red">.innerHTML=show; </span> <br>
+                  } <br>
+          </code>
+                </div>
+            </div>
+            <!-- item 12 end -->
+        </div>
+
+
+
+
+        <!-- row 4 -->
+        <div class="row">
+            <!-- item 13 start -->
+            <!-- 1st col -->
+            <div class="col-lg-7 order-2 order-lg-1">
+                <div class="item1 item_box">
+                    <code>
+              <span class="green">// item 13 </span><br>
+                   <span class="red">let </span> <span class="blue">number24, number25; </span><br> <br>
+  
+                    <span class="blue">number24 =</span> <span class="yollow">50; </span><br>
+                    <span class="blue">number25 =</span> <span class="yollow">50; </span><br>
+                    
+                    <span class="blue">shResult = number24 === number25;</span> <br> <br>
+  
+                  <span class="red">function </span> <span class="yollow">indt(){ </span> <br>
+                    <span class="blue">document</span> <span class="yollow">.getElementById(' <span class="blue">idnt</span> ')</span>
+                        <span class="red">.shResult; </span> <br>
+                    } <br>
+            </code>
+                </div>
+            </div>
+
+
+
+            <!-- 2nd col -->
+            <div class="col-lg-5 order-1 order-lg-2">
+                <div class="item1 item_box text-center">
+                    <h2>#13</h2>
+                    <button class="btn btn-info" onclick="indt()">show result</button>
+                    <p>
+                        <span>50 ===</span>
+                        <span>50 :</span>
+                        <span id="idnt" class="green"></span>
+                    </p>
+                </div>
+            </div>
+            <!-- item 13 end -->
+
+
+
+        </div>
+        <!-- 4th row -->
+        <div class="row">
+            <!-- item 14 start -->
+
+
+            <!-- 1nd col -->
+            <div class="col-lg-5">
+                <div class="item1 item_box text-center">
+                    <h2>#14</h2>
+                    <button class="btn btn-info" onclick="resutlText()">show result</button>
+                    <p>
+                        <span class="blue">"abc"</span>
+                        <span> ===</span>
+                        <span class="blue">"abc"</span>
+                        <span> :</span>
+                        <span id="textResulr" class="green"></span>
+                    </p>
+                </div>
+            </div>
+
+
+            <!-- 2st col -->
+            <div class="col-lg-7">
+                <div class="item1 item_box">
+                    <code>
+              <span class="green">// item 14 </span><br>
+  
+                    <span class="red">let</span> <span class="blue">text1 =</span> <span class="blue">"abc";</span><br>
+                    <span class="red">let</span> <span class="blue">text2 =</span> <span class="blue">"abc";</span><br>
+                    
+                    <span class="blue">textResult = text1 === text2;</span> <br> <br>
+  
+                  <span class="red">function </span> <span class="yollow"> resutlText(){ </span> <br>
+                    <span class="blue">document</span> <span class="yollow">.getElementById(' <span class="blue">textResulr</span> ')</span>
+                        <span class="red">.innerHTML=textResulr; </span> <br>
+                    } <br>
+            </code>
+                </div>
+            </div>
+            <!-- item 14 end -->
+
+
+
+            <!-- item 15 start -->
+            <!-- 1st col -->
+            <div class="col-lg-7 order-2 order-lg-1">
+                <div class="item1 item_box">
+                    <code>
+              <span class="green">// item 15 </span><br>
+  
+                    <span class="red">let</span> <span class="blue">number26 =</span> <span>10;</span><br>
+                    <span class="red">let</span> <span class="blue">text3 =</span> <span class="blue">"text";</span><br>
+                    
+                    <span class="blue">showFalse = number26 === text3;</span> <br> <br>
+  
+                  <span class="red">function </span> <span class="yollow"> falseShow(){ </span> <br>
+                    <span class="blue">document</span> <span class="yollow">.getElementById(' <span class="blue">showFalse</span> ')</span>
+                        <span class="red">.innerHTML=showFalse; </span> <br>
+                    } <br>
+            </code>
+                </div>
+            </div>
+
+
+
+            <!-- 2nd col -->
+            <div class="col-lg-5 order-1 order-lg-2">
+                <div class="item1 item_box text-center">
+                    <h2>#15</h2>
+                    <button class="btn btn-info" onclick="falseShow()">Show Result</button>
+                    <p>
+                        <span>10 ===</span>
+                        <span class="blue">"text" :</span>
+                        <span id="showFalse" class="red"></span>
+                    </p>
+                </div>
+            </div>
+            <!-- item 15 end -->
+
+
+        </div>
+
+
+
+        <!-- 5th row -->
+        <div class="row">
+            <!-- 16 start -->
+            <div class="col-lg-3">
+                <div class="item1 text-center">
+                    <h2>#16</h2>
+                    <button class="btn btn-info" onmouseenter="mouseEnter()">Mouse Enter</button>
+                    <div class="box" id="box1"></div>
+                </div>
+            </div>
+            <!-- 16 end -->
+
+
+
+            <!-- 17 start -->
+            <div class="col-lg-3">
+                <div class="item1 text-center">
+                    <h2>#17</h2>
+                    <button class="btn btn-info" onmouseleave="mouseLeave()">Mouse Leave</button>
+                    <div class="box box2" id="box2"></div>
+                </div>
+            </div>
+            <!-- 17 end -->
+
+
+
+            <!-- 18 start -->
+            <div class="col-lg-3">
+                <div class="item1 text-center">
+                    <h2>#18</h2>
+                    <button class="btn btn-info" onmouseover="mouseOver()">Mouse Over</button>
+                    <div class="box" id="box3"></div>
+                </div>
+            </div>
+            <!-- 18 end -->
+
+
+
+            <!-- 19 start -->
+            <div class="col-lg-3">
+                <div class="item1 item2 text-center">
+                    <h2>#19</h2>
+                    <button class="btn btn-info" ondblclick="dblClick()">Double Click</button>
+                    <div class="box4" id="box4"></div>
+                </div>
+            </div>
+            <!-- 19 end -->
+
+
+            <!-- item 20 start -->
+            <!-- 1st col -->
+            <div class="col-lg-5">
+                <div class="item1 item_box text-center">
+                    <h2>#20</h2>
+                    <button class="btn btn-info" onclick="carsResult()">Show Result</button>
+                    <p id="cars"></p>
+                </div>
+            </div>
+
+
+            <!-- 2nd col -->
+            <div class="col-lg-7">
+                <div class="item1 item_box">
+                    <code>
+                <span class="green">// item 20 </span><br>
+  
+                    <span class="red">let</span> <span class="blue">cars =</span> <span>[" <span class="blue">Lamborghini</span> "," <span class="blue">BMW</span> ",0,true,false];</span><br> <br>
+                    
+                  <span class="red">function </span> <span class="yollow"> carsResult(){ </span> <br>
+                    <span class="blue">document</span> <span class="yollow">.getElementById(' <span class="blue">cars</span> ')</span>
+                        <span class="red">.innerHTML=cars[ <span class="blue">1</span> ]; </span> <br>
+                    } <br>
+              </code>
+                </div>
+            </div>
+            <!-- item 20 end -->
+        </div>
+    </div>
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
